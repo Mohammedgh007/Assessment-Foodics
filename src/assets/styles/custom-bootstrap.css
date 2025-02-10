@@ -1,0 +1,40 @@
+:root {
+    --bs-primary: #440099; /* Custom purple */
+    --bs-link-color: #440099; /* Customize link color */
+    --bs-nav-link-color: white; /* Text color in navbar */
+    --bs-navbar-dark-bg: #440099; /* Navbar background color */
+  }
+
+  .text-primary,
+  :root .text-primary {
+    color: var(--bs-primary) !important;
+  }
+  
+  .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
+  
+  .btn-primary:hover {
+    background-color: #5818a6; /* Darker purple */
+  }
+
+  .btn-outline-primary {
+    background-color: transparent;
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+  }
+
+  .btn-outline-primary:hover {
+    background-color: rgb(251, 248, 248);
+    color: #5818a6;
+    border-color: #5818a6;
+  }
+
+  .text-primary {
+    color: var(--bs-primary);
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: white; /* Text color in navbar */
+  }
