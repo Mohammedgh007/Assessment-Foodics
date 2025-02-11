@@ -9,6 +9,10 @@
   :root .text-primary {
     color: var(--bs-primary) !important;
   }
+
+  .bg-primary {
+    background-color: var(--bs-primary) !important;
+  }
   
   .btn-primary {
     background-color: var(--bs-primary);

@@ -35,6 +35,7 @@
     "selectTimePeriod": "Select Time Period",
     "startTime": "Start Time",
     "endTime": "End Time",
+    "footerText": "All Rights Reserved to Foodics",
     "error": {
         "required": "This field is required",
         "durationMustBeNumber": "The duration must be a valid number",

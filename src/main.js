@@ -11,13 +11,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Bootstrap Icons
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
-store.watch(
-  (state) => state.language.currentLanguage, // Watch the language state
-  (newLanguage) => {
-    i18n.locale = newLanguage; // Update vue-i18n's locale
-  }
-);
-
 Vue.config.productionTip = false
 
 new Vue({

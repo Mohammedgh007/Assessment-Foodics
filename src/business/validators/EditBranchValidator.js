@@ -1,5 +1,6 @@
-
-
+/**
+ * @classdesc This class is used to validate the branch data when edited.
+ */
 export default class EditBranchValidator {
     
     /**
@@ -12,11 +13,15 @@ export default class EditBranchValidator {
             return t('This field is required');
         }
 
-        if (!/^\d+$/.test(input)) {
+        // Convert to string for regex test if it's a number
+        const stringInput = String(input);
+        if (!/^\d+$/.test(stringInput)) {
             return t('The duration must be a valid number');
         }
 
-        if (input < 0) {
+        // Convert to number for comparison
+        const numericInput = Number(input);
+        if (numericInput < 0) {
             return t('Invalid duration value');
         }
 
@@ -39,10 +44,15 @@ export default class EditBranchValidator {
         const days = ['saturday', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
         
         for (const day of days) {
-            const slots = schedule[day];
+            // Initialize empty array if day doesn't exist in schedule
+            const slots = schedule[day] || [];
             
             if (slots.length > 3) {
                 errors[day] = t('Maximum 3 time slots allowed per day');
+                continue;
+            }
+
+            if (slots.length === 0) {
                 continue;
             }
 
@@ -53,14 +63,12 @@ export default class EditBranchValidator {
                 const currentSlot = sortedSlots[i];
                 const nextSlot = sortedSlots[i + 1];
                 
-                // Check if current slot ends after next slot starts
                 if (currentSlot.end > nextSlot.start) {
                     errors[day] = t('Time slots cannot overlap');
                     break;
                 }
             }
 
-            // Validate individual slots
             for (const slot of slots) {
                 if (slot.start >= slot.end) {
                     errors[day] = t('End time must be after start time');

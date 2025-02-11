@@ -4,17 +4,17 @@
 <template>
     <div class="row">
       <div class="col-12">
-        <div class="row d-flex justify-content-between align-items-center">
-          <div class="col-8">
-            <h2>{{ $t('reservations') }}</h2>
+        <div class="row d-flex flex-column flex-sm-row justify-content-center align-items-center">
+          <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex">
+            <h2 class="text-md-start"> {{ $t('reservations') }} </h2>
           </div>
-          <div class="col-4">
-            <div class="row">
-              <div class="col-6">
-                <FoodicsSecondaryBtn :onClick="handleClickDisableReservationsBtn">{{ $t('disableReservations') }}</FoodicsSecondaryBtn>
+          <div class="col-12 col-md-6">
+            <div class="row g-2">
+              <div class="col-12 col-md-6">
+                <FoodicsSecondaryBtn class="w-100" :onClick="handleClickDisableReservationsBtn">{{ $t('disableReservations') }}</FoodicsSecondaryBtn>
               </div>
-              <div class="col-6">
-                <FoodicsPrimaryBtn :onClick="handleClickAddBranchBtn">{{ $t('addBranch') }}</FoodicsPrimaryBtn>
+              <div class="col-12 col-md-6">
+                <FoodicsPrimaryBtn class="w-100" :onClick="handleClickAddBranchBtn">{{ $t('addBranch') }}</FoodicsPrimaryBtn>
               </div>
             </div>
           </div>

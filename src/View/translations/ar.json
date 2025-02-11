@@ -35,6 +35,7 @@
     "selectTimePeriod": "اختيار فترة الوقت",
     "startTime": "وقت البدء",
     "endTime": "وقت النهاية",
+    "footerText": "جميع الحقوق محفوظة إلى فودكس",
     "error": {
         "required": "هذا الحقل مطلوب",
         "durationMustBeNumber": "يجب أن يكون المدة من عدد صحيح",

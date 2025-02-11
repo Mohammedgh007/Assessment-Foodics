@@ -28,6 +28,13 @@
       </div>
     </PageContainer>
 
+    <div class="table-spacer"></div>
+    <div class="table-spacer"></div>
+
+    <div class="flex-grow-1"></div>
+
+    <MainFooter class="position-fixed bottom-0" />
+
     <AddBranchModal 
       :nonReservationsBranches="branchesNonReservationList" 
       :submitSelection="submitAddBranchesSelection" 
@@ -55,6 +62,7 @@ import EditBranchModal from '@/View/components/modalForms/EditBranchModal.vue';
 import PaginatorContainer from '@/View/components/ui/containers/PaginatorContainer.vue';
 import { Modal } from 'bootstrap';
 import Swal from 'sweetalert2';
+import MainFooter from '@/View/components/footer/MainFooter.vue';
 
 export default {
   name: 'BranchReservationsLayout',
@@ -65,7 +73,8 @@ export default {
     ReservationListTable,
     AddBranchModal,
     PaginatorContainer,
-    EditBranchModal
+    EditBranchModal,
+    MainFooter
   },
   props: {
     getBranches: {
